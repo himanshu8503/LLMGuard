@@ -4,6 +4,7 @@ const ApiRequest_Schema = new mongoose.Schema(
     {
         request_id:{
             type: String,
+            required: true,
             unique: true
         },
         project_id:{
@@ -75,4 +76,6 @@ const ApiRequest_Schema = new mongoose.Schema(
     }
 );
 
+const ApiRequest_Model = model("Requests",ApiRequest_Schema);
 
+export default ApiRequest_Model;
